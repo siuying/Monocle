@@ -28,6 +28,8 @@
     <script type="text/javascript" src="../../src/panels/marginal.js"></script>
     <script type="text/javascript" src="../../src/panels/imode.js"></script>
     <script type="text/javascript" src="../../src/panels/eink.js"></script>
+    <script type="text/javascript" src="../../src/controls/scrubber.js"></script>
+    <script type="text/javascript" src="../../src/panels/threepane.js"></script>
     <script type="text/javascript" src="../../src/dimensions/columns.js"></script>
     <script type="text/javascript" src="../../src/flippers/slider.js"></script>
     <script type="text/javascript" src="../../src/flippers/instant.js"></script>
@@ -35,6 +37,7 @@
     <script type="text/javascript" src="../../src/flippers/legacy.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../../styles/monocore.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/monoctrl.css" />
     <link rel="stylesheet" type="text/css" href="../tests.css" />
 
     <style type="text/css">
@@ -121,6 +124,15 @@
             bookData,
             { panels: Monocle.Panels.eInk, flipper: Monocle.Flippers.Instant }
           );
+          
+          // THREE PANE
+          window.reader4 = Monocle.Reader(
+            'threepane',
+            bookData,
+            { panels: Monocle.Panels.ThreePane }
+          );
+          
+          
         }
       );
     </script>
@@ -159,6 +171,16 @@
     <div class="readerInfo">
       <h2>eInk</h2>
       <div class="reader" id="eInk"></div>
+      <p>
+        One panel. Left: backwards, right: forwards. Flashes black briefly
+        between components. You can also use your keyboard: PageUp/PageDown.
+        (Kindle3 maps these key-codes to its page turning buttons.)
+      </p>
+    </div>
+    
+    <div class="readerInfo">
+      <h2>ThreePane</h2>
+      <div class="reader" id="threepane"></div>
       <p>
         One panel. Left: backwards, right: forwards. Flashes black briefly
         between components. You can also use your keyboard: PageUp/PageDown.

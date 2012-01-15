@@ -15,6 +15,8 @@
 //= require "panels/imode"
 //= require "panels/eink"
 //= require "panels/marginal"
+//= require "controls/scrubber"
+//= require "panels/threepane"
 //= require "dimensions/vert"
 //= require "flippers/legacy"
 //= require "dimensions/columns"
